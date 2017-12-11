@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require "ale_ruby_interface"
+ALEInterface.hi

@@ -1,0 +1,2 @@
+gem build /Users/happybai/ale_ruby_interface/ale_ruby_interface.gemspec
+gem install /Users/happybai/ale_ruby_interface/ale_ruby_interface-0.0.0.gem
