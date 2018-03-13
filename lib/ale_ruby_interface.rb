@@ -4,75 +4,77 @@ require 'nmatrix'
 module ALELib
   extend FFI::Library
   ffi_lib '/Users/happybai/Arcade-Learning-Environment/ale_python_interface/libale_c.so'
-  attach_function :ALE_new, [], :void
-  attach_function :ALE_del, [:void], :void
-  attach_function :getString, [:void, :char], :char
-  attach_function :getInt, [:void, :char], :int
-  attach_function :getBool, [:void, :char], :bool
-  attach_function :getFloat, [:void, :char], :float 
-  attach_function :setString, [:void, :char, :char], :void
-  attach_function :setInt, [:void, :char, :int], :void
-  attach_function :setBool, [:void, :char, :bool], :void
-  attach_function :setFloat, [:void, :char, :float], :void
-  attach_function :loadROM, [:void, :char], :void
-  attach_function :act, [:void, :int], :int
-  attach_function :game_over, [:void], :bool
-  attach_function :reset_game, [:void], :void
-  attach_function :getAvailableModes, [:void, :void], :void
-  attach_function :getAvailableModesSize, [:void], :int
-  attach_function :setMode, [:void, :int], :void
-  attach_function :getAvailableDifficulties, [:void, :void], :void
-  attach_function :getAvailableDifficultiesSize, [:void], :int
-  attach_function :setDifficulty, [:void, :int], :void
-  attach_function :getLegalActionSet, [:void, :void], :void
-  attach_function :getLegalActionSize, [:void], :int
-  attach_function :getMinimalActionSet, [:void, :void], :void
-  attach_function :getMinimalActionSize, [:void], :int
-  attach_function :getFrameNumber, [:void], :int
-  attach_function :lives, [:void], :int
-  attach_function :getEpisodeFrameNumber, [:void], :int
-  attach_function :getScreen, [:void, :void], :void
-  attach_function :getRAM, [:void, :void], :void
-  attach_function :getRAMSize, [:void], :int
-  attach_function :getScreenWidth, [:void], :int
-  attach_function :getScreenHeight, [:void], :int
-  attach_function :getScreenRGB, [:void, :void], :void
-  attach_function :getScreenGrayscale, [:void, :void], :void
-  attach_function :saveState, [:void], :void
-  attach_function :loadState, [:void], :void
-  attach_function :cloneState, [:void], :void
-  attach_function :restoreState, [:void, :void], :void
-  attach_function :cloneSystemState, [:void], :void
-  attach_function :restoreSystemState, [:void, :void], :void
-  attach_function :deleteState, [:void], :void
-  attach_function :saveScreenPNG, [:void, :char], :void
-  attach_function :encodeState, [:void, :void, :int], :void
-  attach_function :encodeStateLen, [:void], :int
-  attach_function :decodeState, [:void, :int], :void
-  attach_function :setLoggerMode, [:int], :void
+  attach_function :ALE_new, [], :pointer
+  attach_function :ALE_del, [:pointer], :pointer
+  attach_function :getString, [:pointer, :string], :string
+  attach_function :getInt, [:pointer, :string], :int
+  attach_function :getBool, [:pointer, :string], :bool
+  attach_function :getFloat, [:pointer, :string], :float
+  attach_function :setString, [:pointer, :string, :string], :pointer
+  attach_function :setInt, [:pointer, :string, :int], :pointer
+  attach_function :setBool, [:pointer, :string, :bool], :pointer
+  attach_function :setFloat, [:pointer, :string, :float], :pointer
+  attach_function :loadROM, [:pointer, :string], :pointer
+  attach_function :act, [:pointer, :int], :long
+  attach_function :game_over, [:pointer], :bool
+  attach_function :reset_game, [:pointer], :pointer
+  attach_function :getAvailableModes, [:pointer, :pointer], :pointer
+  attach_function :getAvailableModesSize, [:pointer], :int
+  attach_function :setMode, [:pointer, :int], :pointer
+  attach_function :getAvailableDifficulties, [:pointer, :pointer], :pointer
+  attach_function :getAvailableDifficultiesSize, [:pointer], :int
+  attach_function :setDifficulty, [:pointer, :int], :pointer
+  attach_function :getLegalActionSet, [:pointer, :pointer], :pointer
+  attach_function :getLegalActionSize, [:pointer], :int
+  attach_function :getMinimalActionSet, [:pointer, :pointer], :pointer
+  attach_function :getMinimalActionSize, [:pointer], :int
+  attach_function :getFrameNumber, [:pointer], :int
+  attach_function :lives, [:pointer], :int
+  attach_function :getEpisodeFrameNumber, [:pointer], :int
+  attach_function :getScreen, [:pointer, :pointer], :pointer
+  attach_function :getRAM, [:pointer, :pointer], :pointer
+  attach_function :getRAMSize, [:pointer], :int
+  attach_function :getScreenWidth, [:pointer], :int
+  attach_function :getScreenHeight, [:pointer], :int
+  attach_function :getScreenRGB, [:pointer, :pointer], :pointer
+  attach_function :getScreenGrayscale, [:pointer, :pointer], :pointer
+  attach_function :saveState, [:pointer], :pointer
+  attach_function :loadState, [:pointer], :pointer
+  attach_function :cloneState, [:pointer], :pointer
+  attach_function :restoreState, [:pointer, :pointer], :pointer
+  attach_function :cloneSystemState, [:pointer], :pointer
+  attach_function :restoreSystemState, [:pointer, :pointer], :pointer
+  attach_function :deleteState, [:pointer], :pointer
+  attach_function :saveScreenPNG, [:pointer, :string], :pointer
+  attach_function :encodeState, [:pointer, :pointer, :int], :pointer
+  attach_function :encodeStateLen, [:pointer], :int
+  attach_function :decodeState, [:pointer, :int], :pointer
+  attach_function :setLoggerMode, [:int], :pointer
 end
 
 class ALEInterface
-  # include ALELib
-
   def initialize
+    ale_path = ENV['ale_path'] || '/Users/happybai/Arcade-Learning-Environment'
+    base_path = Dir.pwd
+    Dir.chdir ale_path
     @obj = ALELib.ALE_new
+    Dir.chdir base_path
   end
 
   def get_string(key)
-    return ALELib.getString(@obj, key)
+    ALELib.getString(@obj, key)
   end
 
   def get_int(key)
-    return ALELib.getInt(@obj, key)
+    ALELib.getInt(@obj, key)
   end
 
   def get_bool(key)
-    return ALELib.getBool(@obj, key)
+    ALELib.getBool(@obj, key)
   end
 
   def get_float(key)
-    return ALELib.getFloat(@obj, key)
+    ALELib.getFloat(@obj, key)
   end
 
   def set_string(key, value)
@@ -91,16 +93,16 @@ class ALEInterface
     ALELib.setFloat(@obj, key, value)
   end
 
-  def load_rom(rom_file)
+  def load_ROM(rom_file)
     ALELib.loadROM(@obj, rom_file)
   end
 
   def act(action)
-    return ALELib.act(@obj, action.to_i)
+    ALELib.act(@obj, action.to_i)
   end
 
   def game_over
-    return ALELib.game_over(@obj)
+    ALELib.game_over(@obj)
   end
 
   def reset_game
@@ -109,90 +111,153 @@ class ALEInterface
 
   def get_legal_action_set
     act_size = ALELib.getLegalActionSize(@obj)
-    act = NMatrix.zeros[act_size]
-    ALELib.getLegalActionSet(@obj, act)
-    return act
+    act = NMatrix.zeros [act_size]
+    FFI::MemoryPointer.new(:int, act.size) do |p|
+      p.put_array_of_int(0, act)
+      ALELib.getLegalActionSet(@obj, p)
+      return p.read_array_of_int(act_size)
+    end
   end
 
   def get_minimal_action_set
+    act_size = ALELib.getMinimalActionSize(@obj)
+    act = NMatrix.zeros [act_size]
+    FFI::MemoryPointer.new(:int, act.size) do |p|
+      p.put_array_of_int(0, act)
+      ALELib.getMinimalActionSet(@obj, p)
+      return p.read_array_of_int(act_size)
+    end
   end
 
   def get_available_modes
+    modes_size = ALELib.getAvailableModesSize(@obj)
+    modes = NMatrix.zeros [modes_size]
+    FFI::MemoryPointer.new(:int, modes.size) do |p|
+      p.put_array_of_int(0, modes)
+      ALELib.getAvailableModes(@obj, p)
+      return p.read_array_of_int(modes_size)
+    end
   end
 
-  def set_mode
+  def set_mode(mode)
+    ALELib.set_mode(@obj, mode)
   end
 
-  def get_available_difficuties
+  def get_available_difficulties
+    difficulties_size = ALELib.getAvailableDifficultiesSize(@obj)
+    difficulties = NMatrix.zeros [difficulties_size]
+    FFI::MemoryPointer.new(:int, difficulties.size) do |p|
+      p.put_array_of_int(0, difficulties)
+      ALELib.getAvailableDifficulties(@obj, p)
+      return p.read_array_of_int(difficulties_size)
+    end
   end
 
-  def set_difficulty
-  end
-
-  def set_legal_action_set
-  end
-
-  def set_minimal_action_set
+  def set_difficulty(difficulty)
+    ALELib.set_mode(@obj, difficulty)
   end
 
   def get_frame_number
+    ALELib.getFrameNumber(@obj)
   end
 
   def lives
+    ALELib.lives(@obj)
   end
 
   def get_episode_frame_number
+    ALELib.getEpisodeFrameNumber(@obj)
   end
 
   def get_screen_dims
+    width = ALELib.getScreenWidth(@obj)
+    height = ALELib.getScreenHeight(@obj)
+    { width: width, height: height }
   end
 
-  def get_screen
+  def get_screen(screen_data = nil)
+    # This function fills screen_data with the RAW Pixel data
+    width = ALELib.getScreenWidth(@obj)
+    height = ALELib.getScreenHeight(@obj)
+    size = width * height
+    FFI::MemoryPointer.new(:uint8, size) do |p|
+      ALELib.getScreen(@obj, p)
+      return NMatrix.new(
+        [width * height],
+        p.read_array_of_uint8(size),
+        dtype: :int16
+      )
+    end
   end
 
-  def get_screen_RGB
+  def get_screen_RGB()
+    # This function fills screen_data with the data in RGB format
+    width = ALELib.getScreenWidth(@obj)
+    height = ALELib.getScreenHeight(@obj)
+    size = width * height * 3
+    FFI::MemoryPointer.new(:uint8, size) do |p|
+      ALELib.getScreenRGB(@obj, p)
+      return NMatrix.new(
+        [width, height, 3],
+        p.read_array_of_uint8(size),
+        dtype: :int16
+      )
+    end
   end
 
-  def get_screen_grayscale
+  def get_screen_grayscale(screen_data = nil)
+    width = ALELib.getScreenWidth(@obj)
+    height = ALELib.getScreenHeight(@obj)
+    size = width * height * 1
+    FFI::MemoryPointer.new(:uint8, size) do |p|
+      ALELib.getScreenGrayscale(@obj, p)
+      return NMatrix.new(
+        [width, height, 1],
+        p.read_array_of_uint8(size),
+        dtype: :int16
+      )
+    end
   end
 
   def get_RAM_size
+    ALELib.getRAMSize(@obj)
   end
 
-  def get_RAM
+  def get_RAM()
+    ram_size = ALELib.getRAMSize(@obj)
+    FFI::MemoryPointer.new(:uint64, ram_size) do |p|
+      ALELib.getRAM(@obj, p)
+      return NMatrix.new(
+        [ram_size],
+        p.read_array_of_uint8(ram_size),
+        dtype: :int16
+      )
+    end
   end
 
-  def save_screen_PNG
-  end
+  def save_screen_PNG; end
 
-  def save_state
-  end
+  def save_state; end
 
-  def load_state
-  end
+  def load_state; end
 
-  def clone_state
-  end
+  def clone_state; end
 
-  def restore_state
-  end
+  def restore_state; end
 
-  def clone_system_state
-  end
+  def clone_system_state; end
 
-  def restore_system_state
-  end
+  def restore_system_state; end
 
-  def delete_state
-  end
+  def delete_state; end
 
-  def encode_state_len
-  end
+  def encode_state_len; end
 
-  def encode_state
-  end
-  
-  def decode_state
-  end
+  def encode_state; end
 
+  def decode_state; end
+
+  private
+
+  def as_types; end
 end
