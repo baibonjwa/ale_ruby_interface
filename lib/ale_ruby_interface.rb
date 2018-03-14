@@ -54,11 +54,12 @@ end
 
 class ALEInterface
   def initialize
-    ale_path = ENV['ale_path'] || '/Users/happybai/Arcade-Learning-Environment'
-    base_path = Dir.pwd
-    Dir.chdir ale_path
+    # setup config file manually
+    # ale_path = ENV['ale_path'] || '/Users/happybai/Arcade-Learning-Environment'
+    # base_path = "#{Dir.pwd}/lib"
+    # Dir.chdir base_path
     @obj = ALELib.ALE_new
-    Dir.chdir base_path
+    # Dir.chdir base_path
   end
 
   def get_string(key)
@@ -235,24 +236,46 @@ class ALEInterface
     end
   end
 
-  def save_screen_PNG; end
+  def save_screen_PNG(filename)
+    return ALELib.saveScreenPNG(@obj, filename)
+  end
 
-  def save_state; end
+  def save_state
+    return ALELib.saveState(@obj)
+  end
 
-  def load_state; end
+  def load_state
+    return ALELib.loadState(@obj)
+  end
 
-  def clone_state; end
+  def clone_state
+    # This makes a copy of the environment state. This copy does *not*
+    # include pseudorandomness, making it suitable for planning
+    # purposes. By contrast, see cloneSystemState.
+    return ALELib.cloneState(@obj)
+  end
 
-  def restore_state; end
+  def restore_state(state)
+    ALELib.restoreState(@obj, state)
+  end
 
-  def clone_system_state; end
+  def clone_system_state
+    return ALELib.cloneSystemState(@obj)
+  end
 
-  def restore_system_state; end
+  def restore_system_state
+    ALELib.restoreSystemState(@obj)
+  end
 
-  def delete_state; end
+  def delete_state(state)
+    ALELib.deleteState(state)
+  end
 
-  def encode_state_len; end
+  def encode_state_len(state)
+    return ALELib.encodeStateLen(state)
+  end
 
+  # TBD
   def encode_state; end
 
   def decode_state; end

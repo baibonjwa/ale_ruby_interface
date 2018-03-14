@@ -7,7 +7,7 @@ class ALEInterfaceTest < Minitest::Test
 
   def setup
     @ale = ALEInterface.new
-    pong_path = './pong.bin'
+    pong_path = './lib/pong.bin'
     @ale.load_ROM(pong_path)
   end
 
@@ -16,7 +16,7 @@ class ALEInterfaceTest < Minitest::Test
   end
 
   def test_load_ROM()
-    pong_path = './pong.bin'
+    pong_path = './lib/pong.bin'
     assert @ale.load_ROM(pong_path).is_a?(FFI::Pointer)
   end
 
@@ -85,6 +85,53 @@ class ALEInterfaceTest < Minitest::Test
     results = @ale.get_RAM
     assert_equal(128, results.size)
   end
+
+  def test_save_screen_PNG
+    @ale.save_screen_PNG('./test.png')
+  end
+
+  # TODO: TBD
+  # def test_save_state
+  #   @ale.save_state()
+  # end
+
+  # def test_load_state
+  #   @ale.load_state()
+  # end
+
+  # def test_clone_state
+  #   @ale.clone_state()
+  # end
+
+  # def test_restore_state
+  #   state = ""
+  #   @ale.restore_state(state)
+  # end
+
+  # def test_clone_system_state
+  #   @ale.clone_system_state()
+  # end
+
+  # def test_restore_system_state
+  #   state = ""
+  #   @ale.restore_system_state(state)
+  # end
+
+  # def test_delete_state(state)
+  #   state = ""
+  #   @ale.delete_state()
+  # end
+
+  # def test_encode_state_len(state)
+  #   state = ""
+  #   @ale.encode_state_len()
+  # end
+
+  # def test_encode_state
+  # end
+
+  # def test_decode_state
+  # end
 
   def test_smoke
     action_set = @ale.get_minimal_action_set()
