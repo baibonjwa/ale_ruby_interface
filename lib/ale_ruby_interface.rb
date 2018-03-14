@@ -1,9 +1,13 @@
 require 'ffi'
 require 'nmatrix'
+require 'fileutils'
 
 module ALELib
   extend FFI::Library
-  ffi_lib '/Users/happybai/Arcade-Learning-Environment/ale_python_interface/libale_c.so'
+  # ffi_lib '/Users/happybai/Arcade-Learning-Environment/ale_python_interface/libale_c.so'
+  # ffi_lib File.expand_path(File.join(File.dirname(__FILE__), "lib", "libale_c.so"))
+  # ffi_lib './lib/libale_c.so'
+  ffi_lib File.join(File.dirname(__FILE__), "libale_c.so")
   attach_function :ALE_new, [], :pointer
   attach_function :ALE_del, [:pointer], :pointer
   attach_function :getString, [:pointer, :string], :string
@@ -54,12 +58,13 @@ end
 
 class ALEInterface
   def initialize
-    # setup config file manually
-    # ale_path = ENV['ale_path'] || '/Users/happybai/Arcade-Learning-Environment'
-    # base_path = "#{Dir.pwd}/lib"
-    # Dir.chdir base_path
+    src = File.join(File.dirname(__FILE__), "ale.cfg")
+    dest = './ale.cfg'
+    if !File.exist?('./ale.cfg')
+      FileUtils.cp(src, dest)
+      puts "Created ale.cfg successfully"
+    end
     @obj = ALELib.ALE_new
-    # Dir.chdir base_path
   end
 
   def get_string(key)

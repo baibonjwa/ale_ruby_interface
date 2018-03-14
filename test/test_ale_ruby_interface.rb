@@ -7,7 +7,7 @@ class ALEInterfaceTest < Minitest::Test
 
   def setup
     @ale = ALEInterface.new
-    pong_path = './lib/pong.bin'
+    pong_path = './pong.bin'
     @ale.load_ROM(pong_path)
   end
 
@@ -16,7 +16,7 @@ class ALEInterfaceTest < Minitest::Test
   end
 
   def test_load_ROM()
-    pong_path = './lib/pong.bin'
+    pong_path = './pong.bin'
     assert @ale.load_ROM(pong_path).is_a?(FFI::Pointer)
   end
 
@@ -56,7 +56,7 @@ class ALEInterfaceTest < Minitest::Test
     assert_equal(0, @ale.get_episode_frame_number)
   end
 
-  def test_get_screen_dims 
+  def test_get_screen_dims
     results = @ale.get_screen_dims
     assert_equal(160, results[:width])
     assert_equal(210, results[:height])

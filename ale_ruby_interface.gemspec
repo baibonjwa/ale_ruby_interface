@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "This directly implements a ruby version of the arcade learning environment interface."
   s.authors     = ["Byron Bai"]
   s.email       = 'byron.bai@aol.com'
-  s.files       = ["lib/ale_ruby_interface.rb", "./ale.cfg"]
+  s.files       = ["lib/ale_ruby_interface.rb", "lib/libale_c.so", "lib/ale.cfg"]
   s.homepage    =
     'http://rubygems.org/gems/ale_ruby_interface'
   s.license       = 'MIT'
