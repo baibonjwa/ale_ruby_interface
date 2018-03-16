@@ -143,7 +143,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>act method.</p>
+<p>Applies an action to the game and returns the reward.</p>
 </div></span>
   
 </li>
@@ -167,7 +167,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>clone_state method.</p>
+<p>Makes a copy of the environment state.</p>
 </div></span>
   
 </li>
@@ -191,7 +191,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>clone_system_state method.</p>
+<p>This makes a copy of the system and environment state, suitable for
+serialization.</p>
 </div></span>
   
 </li>
@@ -311,7 +312,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>game_over method.</p>
+<p>Indicates if the game has ended.</p>
 </div></span>
   
 </li>
@@ -335,7 +336,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_available_difficulties method.</p>
+<p>Returns the vector of difficulties available for the current game.</p>
 </div></span>
   
 </li>
@@ -359,7 +360,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_available_modes method.</p>
+<p>Returns the vector of modes available for the current game.</p>
 </div></span>
   
 </li>
@@ -383,7 +384,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_bool method.</p>
+<p>Gets the value of any flag passed as parameter that has a boolean value.</p>
 </div></span>
   
 </li>
@@ -407,7 +408,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_episode_frame_number method.</p>
+<p>Returns the current frame number since the start of the cur- rent episode.</p>
 </div></span>
   
 </li>
@@ -431,7 +432,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_float method.</p>
+<p>Gets the value of any flag passed as parameter that has a float value.</p>
 </div></span>
   
 </li>
@@ -455,7 +456,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_frame_number method.</p>
+<p>Returns the current frame number since the loading of the ROM.</p>
 </div></span>
   
 </li>
@@ -479,7 +480,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_int method.</p>
+<p>Gets the value of any flag passed as parameter that has an integer value.</p>
 </div></span>
   
 </li>
@@ -503,7 +504,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_legal_action_set method.</p>
+<p>Returns the vector of legal actions (all the 18 actions).</p>
 </div></span>
   
 </li>
@@ -527,7 +528,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_minimal_action_set method.</p>
+<p>Returns the vector of the minimal set of actions needed to play the game
+(all actions that have some effect on the game).</p>
 </div></span>
   
 </li>
@@ -551,7 +553,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_RAM method.</p>
+<p>Returns a vector containing current RAM content (byte-level).</p>
 </div></span>
   
 </li>
@@ -599,7 +601,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_screen method.</p>
+<p>Returns a matrix containing the current game screen.</p>
 </div></span>
   
 </li>
@@ -647,7 +649,9 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_screen_grayscale method.</p>
+<p>This method fills the given vector with a grayscale version of the current
+screen, provided in row- major order (typically yielding 210 × 160 = 33,
+600 entries).</p>
 </div></span>
   
 </li>
@@ -671,7 +675,9 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_screen_RGB method.</p>
+<p>This method fills the given vector with a RGB version of the current
+screen, provided in row, column, then colour channel order (typically
+yielding 210 × 160 × 3 = 100, 800 entries).</p>
 </div></span>
   
 </li>
@@ -695,7 +701,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>get_string method.</p>
+<p>Gets the value of any flag passed as parameter that has a string value.</p>
 </div></span>
   
 </li>
@@ -745,7 +751,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>lives method.</p>
+<p>Returns the agent’s remaining number of lives.</p>
 </div></span>
   
 </li>
@@ -769,7 +775,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>load_ROM method.</p>
+<p>TODO: load_ROM method.</p>
 </div></span>
   
 </li>
@@ -793,7 +799,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>load_state method.</p>
+<p>Loads a previous saved state of the system once we have a state saved.</p>
 </div></span>
   
 </li>
@@ -817,7 +823,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>reset_game method.</p>
+<p>Resets the game, but not the full system (it is not “equivalent” to un-
+plugging the console from electricity).</p>
 </div></span>
   
 </li>
@@ -841,7 +848,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>restore_state method.</p>
+<p>Reverse operation of cloneState().</p>
 </div></span>
   
 </li>
@@ -865,7 +872,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>restore_system_state method.</p>
+<p>Reverse operation of cloneSystemState.</p>
 </div></span>
   
 </li>
@@ -889,7 +896,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>save_screen_PNG method.</p>
+<p>Saves the current screen as a png file.</p>
 </div></span>
   
 </li>
@@ -913,7 +920,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>save_state method.</p>
+<p>Saves the current state of the system if one wants to be able to recover a
+state in the future; e.g.</p>
 </div></span>
   
 </li>
@@ -937,7 +945,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>set_bool method.</p>
+<p>Sets the value of any flag that has a boolean type.</p>
 </div></span>
   
 </li>
@@ -961,7 +969,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>set_difficulty method.</p>
+<p>Sets the difficulty of the game.</p>
 </div></span>
   
 </li>
@@ -985,7 +993,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>set_float method.</p>
+<p>Sets the value of any flag that has a float type.</p>
 </div></span>
   
 </li>
@@ -1009,7 +1017,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>set_int method.</p>
+<p>Sets the value of any flag that has an integer type.</p>
 </div></span>
   
 </li>
@@ -1033,7 +1041,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>set_mode method.</p>
+<p>Sets the mode of the game.</p>
 </div></span>
   
 </li>
@@ -1057,7 +1065,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>set_string method.</p>
+<p>Sets the value of any flag that has a string type.</p>
 </div></span>
   
 </li>
@@ -1143,7 +1151,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>act method</p>
+<p>Applies an action to the game and returns the reward. It is the user’s
+responsibility to check if the game has ended and to reset it when
+necessary (this method will keep pressing buttons on the game over screen).</p>
 
 
   </div>
@@ -1157,12 +1167,12 @@
       <pre class="lines">
 
 
-132
 133
-134</pre>
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_act'>act</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_act'>act</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='comma'>,</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
@@ -1184,7 +1194,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>clone_state method</p>
+<p>Makes a copy of the environment state. This copy does not include
+pseudo-randomness, making it suitable for planning purposes. By contrast,
+see cloneSystemState.</p>
 
 
   </div>
@@ -1198,21 +1210,15 @@
       <pre class="lines">
 
 
-324
-325
-326
-327
-328
-329</pre>
+331
+332
+333</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 324</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 331</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clone_state'>clone_state</span>
-  <span class='comment'># This makes a copy of the environment state. This copy does *not*
-</span>  <span class='comment'># include pseudorandomness, making it suitable for planning
-</span>  <span class='comment'># purposes. By contrast, see cloneSystemState.
-</span>  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cloneState'>cloneState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cloneState'>cloneState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1231,7 +1237,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>clone_system_state method</p>
+<p>This makes a copy of the system and environment state, suitable for
+serialization. This includes pseudo-randomness and so is not suitable for
+planning purposes.</p>
 
 
   </div>
@@ -1245,12 +1253,12 @@
       <pre class="lines">
 
 
-339
-340
-341</pre>
+343
+344
+345</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 339</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 343</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clone_system_state'>clone_system_state</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cloneSystemState'>cloneSystemState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1286,10 +1294,10 @@
       <pre class="lines">
 
 
-367</pre>
+371</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 367</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 371</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_decode_state'>decode_state</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1323,12 +1331,12 @@
       <pre class="lines">
 
 
-351
-352
-353</pre>
+355
+356
+357</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 351</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 355</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_state'>delete_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deleteState'>deleteState</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
@@ -1364,10 +1372,10 @@
       <pre class="lines">
 
 
-363</pre>
+367</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 363</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 367</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encode_state'>encode_state</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1401,12 +1409,12 @@
       <pre class="lines">
 
 
-357
-358
-359</pre>
+361
+362
+363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 357</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 361</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encode_state_len'>encode_state_len</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_encodeStateLen'>encodeStateLen</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
@@ -1428,7 +1436,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>game_over method</p>
+<p>Indicates if the game has ended.</p>
 
 
   </div>
@@ -1442,12 +1450,12 @@
       <pre class="lines">
 
 
-138
 139
-140</pre>
+140
+141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_game_over'>game_over</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_game_over'>game_over</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1469,7 +1477,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_available_difficulties method</p>
+<p>Returns the vector of difficulties available for the current game. This
+should be called only after the ROM is loaded.</p>
 
 
   </div>
@@ -1483,18 +1492,18 @@
       <pre class="lines">
 
 
-192
-193
-194
-195
-196
-197
 198
 199
-200</pre>
+200
+201
+202
+203
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_available_difficulties'>get_available_difficulties</span>
   <span class='id identifier rubyid_difficulties_size'>difficulties_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getAvailableDifficultiesSize'>getAvailableDifficultiesSize</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1522,7 +1531,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_available_modes method</p>
+<p>Returns the vector of modes available for the current game. This should be
+called only after the ROM is loaded.</p>
 
 
   </div>
@@ -1536,18 +1546,18 @@
       <pre class="lines">
 
 
-174
-175
-176
-177
 178
 179
 180
 181
-182</pre>
+182
+183
+184
+185
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_available_modes'>get_available_modes</span>
   <span class='id identifier rubyid_modes_size'>modes_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getAvailableModesSize'>getAvailableModesSize</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1575,7 +1585,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_bool method</p>
+<p>Gets the value of any flag passed as parameter that has a boolean value</p>
 
 
   </div>
@@ -1616,7 +1626,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_episode_frame_number method</p>
+<p>Returns the current frame number since the start of the cur- rent episode.</p>
 
 
   </div>
@@ -1630,12 +1640,12 @@
       <pre class="lines">
 
 
-222
-223
-224</pre>
+229
+230
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 229</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_episode_frame_number'>get_episode_frame_number</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getEpisodeFrameNumber'>getEpisodeFrameNumber</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1657,7 +1667,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_float method</p>
+<p>Gets the value of any flag passed as parameter that has a float value</p>
 
 
   </div>
@@ -1698,7 +1708,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_frame_number method</p>
+<p>Returns the current frame number since the loading of the ROM.</p>
 
 
   </div>
@@ -1712,12 +1722,12 @@
       <pre class="lines">
 
 
-210
-211
-212</pre>
+217
+218
+219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 217</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_frame_number'>get_frame_number</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getFrameNumber'>getFrameNumber</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1739,7 +1749,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_int method</p>
+<p>Gets the value of any flag passed as parameter that has an integer value</p>
 
 
   </div>
@@ -1780,7 +1790,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_legal_action_set method</p>
+<p>Returns the vector of legal actions (all the 18 actions). This should be
+called only after the ROM is loaded.</p>
 
 
   </div>
@@ -1794,18 +1805,18 @@
       <pre class="lines">
 
 
-150
-151
 152
 153
 154
 155
 156
 157
-158</pre>
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_legal_action_set'>get_legal_action_set</span>
   <span class='id identifier rubyid_act_size'>act_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getLegalActionSize'>getLegalActionSize</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1833,7 +1844,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_minimal_action_set method</p>
+<p>Returns the vector of the minimal set of actions needed to play the game
+(all actions that have some effect on the game). This should be called only
+after the ROM is loaded.</p>
 
 
   </div>
@@ -1847,18 +1860,18 @@
       <pre class="lines">
 
 
-162
-163
-164
 165
 166
 167
 168
 169
-170</pre>
+170
+171
+172
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 162</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_minimal_action_set'>get_minimal_action_set</span>
   <span class='id identifier rubyid_act_size'>act_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getMinimalActionSize'>getMinimalActionSize</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1886,7 +1899,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_RAM method</p>
+<p>Returns a vector containing current RAM content (byte-level).</p>
 
 
   </div>
@@ -1900,20 +1913,20 @@
       <pre class="lines">
 
 
-292
-293
-294
-295
-296
-297
-298
 299
 300
 301
-302</pre>
+302
+303
+304
+305
+306
+307
+308
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 299</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_RAM'>get_RAM</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ram_size'>ram_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getRAMSize'>getRAMSize</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1957,12 +1970,12 @@
       <pre class="lines">
 
 
-286
-287
-288</pre>
+293
+294
+295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 293</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_RAM_size'>get_RAM_size</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getRAMSize'>getRAMSize</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -1984,7 +1997,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_screen method</p>
+<p>Returns a matrix containing the current game screen.</p>
 
 
   </div>
@@ -1998,23 +2011,23 @@
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
 243
 244
 245
 246
 247
 248
-249</pre>
+249
+250
+251
+252
+253
+254
+255
+256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 243</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_screen'>get_screen</span><span class='lparen'>(</span><span class='id identifier rubyid_screen_data'>screen_data</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='comment'># This function fills screen_data with the RAW Pixel data
@@ -2061,14 +2074,14 @@
       <pre class="lines">
 
 
-228
-229
-230
-231
-232</pre>
+235
+236
+237
+238
+239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 235</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_screen_dims'>get_screen_dims</span>
   <span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getScreenWidth'>getScreenWidth</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2092,7 +2105,12 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_screen_grayscale method</p>
+<p>This method fills the given vector with a grayscale version of the current
+screen, provided in row- major order (typically yielding 210 × 160 = 33,
+600 entries). The vector is resized as needed. For efficiency it is
+recommended to initialize the vector beforehand, to make sure an allocation
+is not performed at each time step. Note that the grayscale value
+corresponds to the pixel’s luminance; for more details, consult the web.</p>
 
 
   </div>
@@ -2106,22 +2124,22 @@
       <pre class="lines">
 
 
-270
-271
-272
-273
-274
-275
-276
 277
 278
 279
 280
 281
-282</pre>
+282
+283
+284
+285
+286
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 270</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_screen_grayscale'>get_screen_grayscale</span><span class='lparen'>(</span><span class='id identifier rubyid_screen_data'>screen_data</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getScreenWidth'>getScreenWidth</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2153,7 +2171,14 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_screen_RGB method</p>
+<p>This method fills the given vector with a RGB version of the current
+screen, provided in row, column, then colour channel order (typically
+yielding 210 × 160 × 3 = 100, 800 entries). The colour channels themselves
+are, in order: R, G, B. For example, output_rgb_buffer[(160 * 3) * 1 + 52 *
+3 + 1] corresponds to the 2nd row, 53rd column pixel’s green value. The
+vector is resized as needed. Still, for efficiency it is recommended to
+initialize the vector beforehand, to make sure an allocation is not
+performed at each time step.</p>
 
 
   </div>
@@ -2167,23 +2192,23 @@
       <pre class="lines">
 
 
-253
-254
-255
-256
-257
-258
-259
 260
 261
 262
 263
 264
 265
-266</pre>
+266
+267
+268
+269
+270
+271
+272
+273</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 253</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 260</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_screen_RGB'>get_screen_RGB</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='comment'># This function fills screen_data with the data in RGB format
@@ -2216,7 +2241,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>get_string method</p>
+<p>Gets the value of any flag passed as parameter that has a string value</p>
 
 
   </div>
@@ -2257,7 +2282,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>lives method</p>
+<p>Returns the agent’s remaining number of lives. If the game does not have
+the concept of lives (e.g. Freeway), this function returns 0.</p>
 
 
   </div>
@@ -2271,12 +2297,12 @@
       <pre class="lines">
 
 
-216
-217
-218</pre>
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 223</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lives'>lives</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lives'>lives</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2298,7 +2324,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>load_ROM method</p>
+<p>TODO: load_ROM method</p>
 
 
   </div>
@@ -2339,7 +2365,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>load_state method</p>
+<p>Loads a previous saved state of the system once we have a state saved.</p>
 
 
   </div>
@@ -2353,12 +2379,12 @@
       <pre class="lines">
 
 
-318
-319
-320</pre>
+325
+326
+327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 318</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 325</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_state'>load_state</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_loadState'>loadState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2380,7 +2406,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>reset_game method</p>
+<p>Resets the game, but not the full system (it is not “equivalent” to un-
+plugging the console from electricity).</p>
 
 
   </div>
@@ -2394,12 +2421,12 @@
       <pre class="lines">
 
 
-144
 145
-146</pre>
+146
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reset_game'>reset_game</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_game_over'>game_over</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2421,7 +2448,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>restore_state method</p>
+<p>Reverse operation of cloneState(). This does not restore pseudo-randomness,
+so that repeated calls to restoreState() in the stochastic controls setting
+will not lead to the same outcomes. By contrast, see restoreSystemState.</p>
 
 
   </div>
@@ -2435,12 +2464,12 @@
       <pre class="lines">
 
 
-333
-334
-335</pre>
+337
+338
+339</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 333</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 337</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore_state'>restore_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restoreState'>restoreState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='comma'>,</span> <span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
@@ -2462,7 +2491,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>restore_system_state method</p>
+<p>Reverse operation of cloneSystemState.</p>
 
 
   </div>
@@ -2476,12 +2505,12 @@
       <pre class="lines">
 
 
-345
-346
-347</pre>
+349
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 345</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 349</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restore_system_state'>restore_system_state</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restoreSystemState'>restoreSystemState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2503,7 +2532,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>save_screen_PNG method</p>
+<p>Saves the current screen as a png file.</p>
 
 
   </div>
@@ -2517,12 +2546,12 @@
       <pre class="lines">
 
 
-306
-307
-308</pre>
+313
+314
+315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 306</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 313</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save_screen_PNG'>save_screen_PNG</span><span class='lparen'>(</span><span class='id identifier rubyid_filename'>filename</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_saveScreenPNG'>saveScreenPNG</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='comma'>,</span> <span class='id identifier rubyid_filename'>filename</span><span class='rparen'>)</span>
@@ -2544,7 +2573,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>save_state method</p>
+<p>Saves the current state of the system if one wants to be able to recover a
+state in the future; e.g. in search algorithms.</p>
 
 
   </div>
@@ -2558,12 +2588,12 @@
       <pre class="lines">
 
 
-312
-313
-314</pre>
+319
+320
+321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 312</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 319</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save_state'>save_state</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_saveState'>saveState</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='rparen'>)</span>
@@ -2585,7 +2615,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>set_bool method</p>
+<p>Sets the value of any flag that has a boolean type</p>
 
 
   </div>
@@ -2626,7 +2656,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>set_difficulty method</p>
+<p>Sets the difficulty of the game. The difficulty must be an available mode
+(otherwise it throws an exception). This should be called only after the
+ROM is loaded.</p>
 
 
   </div>
@@ -2640,12 +2672,12 @@
       <pre class="lines">
 
 
-204
-205
-206</pre>
+211
+212
+213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_difficulty'>set_difficulty</span><span class='lparen'>(</span><span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set_mode'>set_mode</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
@@ -2667,7 +2699,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>set_float method</p>
+<p>Sets the value of any flag that has a float type</p>
 
 
   </div>
@@ -2708,7 +2740,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>set_int method</p>
+<p>Sets the value of any flag that has an integer type</p>
 
 
   </div>
@@ -2749,7 +2781,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>set_mode method</p>
+<p>Sets the mode of the game. The mode must be an available mode (otherwise it
+throws an exception). This should be called only after the ROM is loaded.</p>
 
 
   </div>
@@ -2763,12 +2796,12 @@
       <pre class="lines">
 
 
-186
-187
-188</pre>
+191
+192
+193</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'lib/ale_ruby_interface.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_mode'>set_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_mode'>mode</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="ALELib.html" title="ALELib (module)">ALELib</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set_mode'>set_mode</span><span class='lparen'>(</span><span class='ivar'>@obj</span><span class='comma'>,</span> <span class='id identifier rubyid_mode'>mode</span><span class='rparen'>)</span>
@@ -2790,7 +2823,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>set_string method</p>
+<p>Sets the value of any flag that has a string type</p>
 
 
   </div>
@@ -2824,7 +2857,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 16 14:26:48 2018 by
+  Generated on Fri Mar 16 15:25:15 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.8 (ruby-2.4.1).
 </div>

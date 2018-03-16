@@ -74,79 +74,81 @@ class ALEInterface
   end
 
   ##
-  # get_string method
+  # Gets the value of any flag passed as parameter that has a string value
   def get_string(key)
     ALELib.getString(@obj, key)
   end
 
   ##
-  # get_int method
+  # Gets the value of any flag passed as parameter that has an integer value
   def get_int(key)
     ALELib.getInt(@obj, key)
   end
 
   ##
-  # get_bool method
+  # Gets the value of any flag passed as parameter that has a boolean value
   def get_bool(key)
     ALELib.getBool(@obj, key)
   end
 
   ##
-  # get_float method
+  # Gets the value of any flag passed as parameter that has a float value
   def get_float(key)
     ALELib.getFloat(@obj, key)
   end
 
   ##
-  # set_string method
+  # Sets the value of any flag that has a string type
   def set_string(key, value)
     ALELib.setString(@obj, key, value)
   end
 
   ##
-  # set_int method
+  # Sets the value of any flag that has an integer type
   def set_int(key, value)
     ALELib.setInt(@obj, key, value)
   end
 
   ##
-  # set_bool method
+  # Sets the value of any flag that has a boolean type
   def set_bool(key, value)
     ALELib.setBool(@obj, key, value)
   end
 
   ##
-  # set_float method
+  # Sets the value of any flag that has a float type
   def set_float(key, value)
     ALELib.setFloat(@obj, key, value)
   end
 
   ##
-  # load_ROM method
+  # TODO: load_ROM method
   def load_ROM(rom_file)
     ALELib.loadROM(@obj, rom_file)
   end
 
   ##
-  # act method
+  # Applies an action to the game and returns the reward.
+  # It is the user’s responsibility to check if the game has ended and to reset it when necessary (this method will keep pressing buttons on the game over screen).
   def act(action)
     ALELib.act(@obj, action.to_i)
   end
 
   ##
-  # game_over method
+  # Indicates if the game has ended.
   def game_over
     ALELib.game_over(@obj)
   end
 
   ##
-  # reset_game method
+  # Resets the game, but not the full system (it is not “equivalent” to un- plugging the console from electricity).
   def reset_game
     ALELib.game_over(@obj)
   end
 
   ##
-  # get_legal_action_set method
+  # Returns the vector of legal actions (all the 18 actions).
+  # This should be called only after the ROM is loaded.
   def get_legal_action_set
     act_size = ALELib.getLegalActionSize(@obj)
     act = NMatrix.zeros [act_size]
@@ -158,7 +160,8 @@ class ALEInterface
   end
 
   ##
-  # get_minimal_action_set method
+  # Returns the vector of the minimal set of actions needed to play the game (all actions that have some effect on the game).
+  # This should be called only after the ROM is loaded.
   def get_minimal_action_set
     act_size = ALELib.getMinimalActionSize(@obj)
     act = NMatrix.zeros [act_size]
@@ -170,7 +173,8 @@ class ALEInterface
   end
 
   ##
-  # get_available_modes method
+  # Returns the vector of modes available for the current game.
+  # This should be called only after the ROM is loaded.
   def get_available_modes
     modes_size = ALELib.getAvailableModesSize(@obj)
     modes = NMatrix.zeros [modes_size]
@@ -182,13 +186,15 @@ class ALEInterface
   end
 
   ##
-  # set_mode method
+  # Sets the mode of the game. The mode must be an available mode (otherwise it throws an exception).
+  # This should be called only after the ROM is loaded.
   def set_mode(mode)
     ALELib.set_mode(@obj, mode)
   end
 
   ##
-  # get_available_difficulties method
+  # Returns the vector of difficulties available for the current game.
+  # This should be called only after the ROM is loaded.
   def get_available_difficulties
     difficulties_size = ALELib.getAvailableDifficultiesSize(@obj)
     difficulties = NMatrix.zeros [difficulties_size]
@@ -200,25 +206,26 @@ class ALEInterface
   end
 
   ##
-  # set_difficulty method
+  # Sets the difficulty of the game. The difficulty must be an available mode (otherwise it throws an exception).
+  # This should be called only after the ROM is loaded.
   def set_difficulty(difficulty)
     ALELib.set_mode(@obj, difficulty)
   end
 
   ##
-  # get_frame_number method
+  # Returns the current frame number since the loading of the ROM.
   def get_frame_number
     ALELib.getFrameNumber(@obj)
   end
 
   ##
-  # lives method
+  # Returns the agent’s remaining number of lives. If the game does not have the concept of lives (e.g. Freeway), this function returns 0.
   def lives
     ALELib.lives(@obj)
   end
 
   ##
-  # get_episode_frame_number method
+  # Returns the current frame number since the start of the cur- rent episode.
   def get_episode_frame_number
     ALELib.getEpisodeFrameNumber(@obj)
   end
@@ -232,7 +239,7 @@ class ALEInterface
   end
 
   ##
-  # get_screen method
+  # Returns a matrix containing the current game screen.
   def get_screen(screen_data = nil)
     # This function fills screen_data with the RAW Pixel data
     width = ALELib.getScreenWidth(@obj)
@@ -249,7 +256,7 @@ class ALEInterface
   end
 
   ##
-  # get_screen_RGB method
+  # This method fills the given vector with a RGB version of the current screen, provided in row, column, then colour channel order (typically yielding 210 × 160 × 3 = 100, 800 entries). The colour channels themselves are, in order: R, G, B. For example, output_rgb_buffer[(160 * 3) * 1 + 52 * 3 + 1] corresponds to the 2nd row, 53rd column pixel’s green value. The vector is resized as needed. Still, for efficiency it is recommended to initialize the vector beforehand, to make sure an allocation is not performed at each time step.
   def get_screen_RGB()
     # This function fills screen_data with the data in RGB format
     width = ALELib.getScreenWidth(@obj)
@@ -266,7 +273,7 @@ class ALEInterface
   end
 
   ##
-  # get_screen_grayscale method
+  # This method fills the given vector with a grayscale version of the current screen, provided in row- major order (typically yielding 210 × 160 = 33, 600 entries). The vector is resized as needed. For efficiency it is recommended to initialize the vector beforehand, to make sure an allocation is not performed at each time step. Note that the grayscale value corresponds to the pixel’s luminance; for more details, consult the web.
   def get_screen_grayscale(screen_data = nil)
     width = ALELib.getScreenWidth(@obj)
     height = ALELib.getScreenHeight(@obj)
@@ -288,7 +295,7 @@ class ALEInterface
   end
 
   ##
-  # get_RAM method
+  # Returns a vector containing current RAM content (byte-level).
   def get_RAM()
     ram_size = ALELib.getRAMSize(@obj)
     FFI::MemoryPointer.new(:uint64, ram_size) do |p|
@@ -302,46 +309,43 @@ class ALEInterface
   end
 
   ##
-  # save_screen_PNG method
+  # Saves the current screen as a png file.
   def save_screen_PNG(filename)
     return ALELib.saveScreenPNG(@obj, filename)
   end
 
   ##
-  # save_state method
+  # Saves the current state of the system if one wants to be able to recover a state in the future; e.g. in search algorithms.
   def save_state
     return ALELib.saveState(@obj)
   end
 
   ##
-  # load_state method
+  # Loads a previous saved state of the system once we have a state saved.
   def load_state
     return ALELib.loadState(@obj)
   end
 
   ##
-  # clone_state method
+  # Makes a copy of the environment state. This copy does not include pseudo-randomness, making it suitable for planning purposes. By contrast, see cloneSystemState.
   def clone_state
-    # This makes a copy of the environment state. This copy does *not*
-    # include pseudorandomness, making it suitable for planning
-    # purposes. By contrast, see cloneSystemState.
     return ALELib.cloneState(@obj)
   end
 
   ##
-  # restore_state method
+  # Reverse operation of cloneState(). This does not restore pseudo-randomness, so that repeated calls to restoreState() in the stochastic controls setting will not lead to the same outcomes. By contrast, see restoreSystemState.
   def restore_state(state)
     ALELib.restoreState(@obj, state)
   end
 
   ##
-  # clone_system_state method
+  # This makes a copy of the system and environment state, suitable for serialization. This includes pseudo-randomness and so is not suitable for planning purposes.
   def clone_system_state
     return ALELib.cloneSystemState(@obj)
   end
 
   ##
-  # restore_system_state method
+  # Reverse operation of cloneSystemState.
   def restore_system_state
     ALELib.restoreSystemState(@obj)
   end
