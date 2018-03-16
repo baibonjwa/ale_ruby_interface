@@ -60,13 +60,15 @@ ale.get_screen_RGB() # => #<NMatrix:0x007f9d860d1d00 shape:[160,210,3] dtype:int
 
 
 
-## Document
+## Documents
+
+http://www.rubydoc.info/github/happybai/ale_ruby_interface/master
 
 
+<!--
 ## FAQ
 
 TBD
-
 
 
 
@@ -90,4 +92,4 @@ gem install nmatrix
 rm /usr/local/bin/gcc-4.9 /usr/local/bin/g++-4.9
 mv /usr/local/bin/gcc-4.9-orig /usr/local/bin/gcc-4.9
 mv /usr/local/bin/g++-4.9-orig /usr/local/bin/g++-4.9
-
+ -->
