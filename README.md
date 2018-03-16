@@ -64,6 +64,10 @@ ale.get_screen_RGB() # => #<NMatrix:0x007f9d860d1d00 shape:[160,210,3] dtype:int
 
 http://www.rubydoc.info/github/happybai/ale_ruby_interface/master
 
+## License
+
+alm_ruby_interface is [MIT licensed](./LICENSE).
+
 
 <!--
 ## FAQ
