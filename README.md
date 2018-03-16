@@ -62,7 +62,7 @@ ale.get_screen_RGB() # => #<NMatrix:0x007f9d860d1d00 shape:[160,210,3] dtype:int
 
 ## API
 
-TBD
+
 
 
 

@@ -2,11 +2,10 @@ require 'ffi'
 require 'nmatrix'
 require 'fileutils'
 
+##
+# Module for connecting to libale_c.so
 module ALELib
   extend FFI::Library
-  # ffi_lib '/Users/happybai/Arcade-Learning-Environment/ale_python_interface/libale_c.so'
-  # ffi_lib File.expand_path(File.join(File.dirname(__FILE__), "lib", "libale_c.so"))
-  # ffi_lib './lib/libale_c.so'
   ffi_lib File.join(File.dirname(__FILE__), "libale_c.so")
   attach_function :ALE_new, [], :pointer
   attach_function :ALE_del, [:pointer], :pointer
@@ -56,8 +55,15 @@ module ALELib
   attach_function :setLoggerMode, [:int], :pointer
 end
 
+##
+# This is the main class
+
 class ALEInterface
+
+  ##
+  # initialize method
   def initialize
+    # if ale.cfg doesn't exist, will create one.
     src = File.join(File.dirname(__FILE__), "ale.cfg")
     dest = './ale.cfg'
     if !File.exist?('./ale.cfg')
@@ -67,54 +73,80 @@ class ALEInterface
     @obj = ALELib.ALE_new
   end
 
+  ##
+  # get_string method
   def get_string(key)
     ALELib.getString(@obj, key)
   end
 
+  ##
+  # get_int method
   def get_int(key)
     ALELib.getInt(@obj, key)
   end
 
+  ##
+  # get_bool method
   def get_bool(key)
     ALELib.getBool(@obj, key)
   end
 
+  ##
+  # get_float method
   def get_float(key)
     ALELib.getFloat(@obj, key)
   end
 
+  ##
+  # set_string method
   def set_string(key, value)
     ALELib.setString(@obj, key, value)
   end
 
+  ##
+  # set_int method
   def set_int(key, value)
     ALELib.setInt(@obj, key, value)
   end
 
+  ##
+  # set_bool method
   def set_bool(key, value)
     ALELib.setBool(@obj, key, value)
   end
 
+  ##
+  # set_float method
   def set_float(key, value)
     ALELib.setFloat(@obj, key, value)
   end
 
+  ##
+  # load_ROM method
   def load_ROM(rom_file)
     ALELib.loadROM(@obj, rom_file)
   end
 
+  ##
+  # act method
   def act(action)
     ALELib.act(@obj, action.to_i)
   end
 
+  ##
+  # game_over method
   def game_over
     ALELib.game_over(@obj)
   end
 
+  ##
+  # reset_game method
   def reset_game
     ALELib.game_over(@obj)
   end
 
+  ##
+  # get_legal_action_set method
   def get_legal_action_set
     act_size = ALELib.getLegalActionSize(@obj)
     act = NMatrix.zeros [act_size]
@@ -125,6 +157,8 @@ class ALEInterface
     end
   end
 
+  ##
+  # get_minimal_action_set method
   def get_minimal_action_set
     act_size = ALELib.getMinimalActionSize(@obj)
     act = NMatrix.zeros [act_size]
@@ -135,6 +169,8 @@ class ALEInterface
     end
   end
 
+  ##
+  # get_available_modes method
   def get_available_modes
     modes_size = ALELib.getAvailableModesSize(@obj)
     modes = NMatrix.zeros [modes_size]
@@ -145,10 +181,14 @@ class ALEInterface
     end
   end
 
+  ##
+  # set_mode method
   def set_mode(mode)
     ALELib.set_mode(@obj, mode)
   end
 
+  ##
+  # get_available_difficulties method
   def get_available_difficulties
     difficulties_size = ALELib.getAvailableDifficultiesSize(@obj)
     difficulties = NMatrix.zeros [difficulties_size]
@@ -159,28 +199,40 @@ class ALEInterface
     end
   end
 
+  ##
+  # set_difficulty method
   def set_difficulty(difficulty)
     ALELib.set_mode(@obj, difficulty)
   end
 
+  ##
+  # get_frame_number method
   def get_frame_number
     ALELib.getFrameNumber(@obj)
   end
 
+  ##
+  # lives method
   def lives
     ALELib.lives(@obj)
   end
 
+  ##
+  # get_episode_frame_number method
   def get_episode_frame_number
     ALELib.getEpisodeFrameNumber(@obj)
   end
 
+  ##
+  # get_screen_dims method
   def get_screen_dims
     width = ALELib.getScreenWidth(@obj)
     height = ALELib.getScreenHeight(@obj)
     { width: width, height: height }
   end
 
+  ##
+  # get_screen method
   def get_screen(screen_data = nil)
     # This function fills screen_data with the RAW Pixel data
     width = ALELib.getScreenWidth(@obj)
@@ -196,6 +248,8 @@ class ALEInterface
     end
   end
 
+  ##
+  # get_screen_RGB method
   def get_screen_RGB()
     # This function fills screen_data with the data in RGB format
     width = ALELib.getScreenWidth(@obj)
@@ -211,6 +265,8 @@ class ALEInterface
     end
   end
 
+  ##
+  # get_screen_grayscale method
   def get_screen_grayscale(screen_data = nil)
     width = ALELib.getScreenWidth(@obj)
     height = ALELib.getScreenHeight(@obj)
@@ -225,10 +281,14 @@ class ALEInterface
     end
   end
 
+  ##
+  # get_RAM_size method
   def get_RAM_size
     ALELib.getRAMSize(@obj)
   end
 
+  ##
+  # get_RAM method
   def get_RAM()
     ram_size = ALELib.getRAMSize(@obj)
     FFI::MemoryPointer.new(:uint64, ram_size) do |p|
@@ -241,18 +301,26 @@ class ALEInterface
     end
   end
 
+  ##
+  # save_screen_PNG method
   def save_screen_PNG(filename)
     return ALELib.saveScreenPNG(@obj, filename)
   end
 
+  ##
+  # save_state method
   def save_state
     return ALELib.saveState(@obj)
   end
 
+  ##
+  # load_state method
   def load_state
     return ALELib.loadState(@obj)
   end
 
+  ##
+  # clone_state method
   def clone_state
     # This makes a copy of the environment state. This copy does *not*
     # include pseudorandomness, making it suitable for planning
@@ -260,29 +328,42 @@ class ALEInterface
     return ALELib.cloneState(@obj)
   end
 
+  ##
+  # restore_state method
   def restore_state(state)
     ALELib.restoreState(@obj, state)
   end
 
+  ##
+  # clone_system_state method
   def clone_system_state
     return ALELib.cloneSystemState(@obj)
   end
 
+  ##
+  # restore_system_state method
   def restore_system_state
     ALELib.restoreSystemState(@obj)
   end
 
+  ##
+  # delete_state method
   def delete_state(state)
     ALELib.deleteState(state)
   end
 
+  ##
+  # encode_state_len method
   def encode_state_len(state)
     return ALELib.encodeStateLen(state)
   end
 
-  # TBD
+  ##
+  # encode_staten method
   def encode_state; end
 
+  ##
+  # encode_staten method
   def decode_state; end
 
   private

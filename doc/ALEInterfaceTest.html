@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class ALEInterfaceTest - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Minitest::Test
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-get_RAM_size">#get_RAM_size</a>
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-test_ale_interface_initialize">#test_ale_interface_initialize</a>
+    
+    <li ><a href="#method-i-test_get_RAM">#test_get_RAM</a>
+    
+    <li ><a href="#method-i-test_get_available_difficulties">#test_get_available_difficulties</a>
+    
+    <li ><a href="#method-i-test_get_available_modes">#test_get_available_modes</a>
+    
+    <li ><a href="#method-i-test_get_episode_frame_number">#test_get_episode_frame_number</a>
+    
+    <li ><a href="#method-i-test_get_frame_number">#test_get_frame_number</a>
+    
+    <li ><a href="#method-i-test_get_legal_action_set">#test_get_legal_action_set</a>
+    
+    <li ><a href="#method-i-test_get_screen">#test_get_screen</a>
+    
+    <li ><a href="#method-i-test_get_screen_RGB">#test_get_screen_RGB</a>
+    
+    <li ><a href="#method-i-test_get_screen_dims">#test_get_screen_dims</a>
+    
+    <li ><a href="#method-i-test_get_screen_grayscale">#test_get_screen_grayscale</a>
+    
+    <li ><a href="#method-i-test_lives">#test_lives</a>
+    
+    <li ><a href="#method-i-test_load_ROM">#test_load_ROM</a>
+    
+    <li ><a href="#method-i-test_minimal_action_set">#test_minimal_action_set</a>
+    
+    <li ><a href="#method-i-test_save_screen_PNG">#test_save_screen_PNG</a>
+    
+    <li ><a href="#method-i-test_smoke">#test_smoke</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-ALEInterfaceTest">
+  <h1 id="class-ALEInterfaceTest" class="class">
+    class ALEInterfaceTest
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-get_RAM_size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_RAM_size</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_RAM_size-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_RAM_size</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_RAM_size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-ivar">@ale</span> = <span class="ruby-constant">ALEInterface</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">pong_path</span> = <span class="ruby-string">&#39;./pong.bin&#39;</span>
+  <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">load_ROM</span>(<span class="ruby-identifier">pong_path</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_ale_interface_initialize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_ale_interface_initialize</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_ale_interface_initialize-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ale_interface_initialize</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@ale</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_RAM" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_RAM</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_RAM-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_RAM</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_RAM</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">128</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_available_difficulties" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_available_difficulties</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_available_difficulties-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_available_difficulties</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_available_difficulties</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">0</span>, <span class="ruby-value">1</span>], <span class="ruby-identifier">results</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_available_modes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_available_modes</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_available_modes-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_available_modes</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_available_modes</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">0</span>, <span class="ruby-value">1</span>], <span class="ruby-identifier">results</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_episode_frame_number" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_episode_frame_number</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_episode_frame_number-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_episode_frame_number</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_episode_frame_number</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_frame_number" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_frame_number</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_frame_number-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_frame_number</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_frame_number</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_legal_action_set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_legal_action_set</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_legal_action_set-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_legal_action_set</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_legal_action_set</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">0</span>, <span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">5</span>, <span class="ruby-value">6</span>, <span class="ruby-value">7</span>, <span class="ruby-value">8</span>, <span class="ruby-value">9</span>, <span class="ruby-value">10</span>, <span class="ruby-value">11</span>, <span class="ruby-value">12</span>, <span class="ruby-value">13</span>, <span class="ruby-value">14</span>, <span class="ruby-value">15</span>, <span class="ruby-value">16</span>, <span class="ruby-value">17</span>], <span class="ruby-identifier">results</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_screen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_screen</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_screen-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_screen</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_screen</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">160</span> <span class="ruby-operator">*</span> <span class="ruby-value">210</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_screen_RGB" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_screen_RGB</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_screen_RGB-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_screen_RGB</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_screen_RGB</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">160</span> <span class="ruby-operator">*</span> <span class="ruby-value">210</span> <span class="ruby-operator">*</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_screen_dims" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_screen_dims</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_screen_dims-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_screen_dims</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_screen_dims</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">160</span>, <span class="ruby-identifier">results</span>[<span class="ruby-value">:width</span>])
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">210</span>, <span class="ruby-identifier">results</span>[<span class="ruby-value">:height</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_get_screen_grayscale" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_screen_grayscale</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_screen_grayscale-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_screen_grayscale</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_screen_grayscale</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">160</span> <span class="ruby-operator">*</span> <span class="ruby-value">210</span> <span class="ruby-operator">*</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_lives" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_lives</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_lives-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_lives</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>, <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">lives</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_load_ROM" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_load_ROM</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_load_ROM-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_load_ROM</span>()
+  <span class="ruby-identifier">pong_path</span> = <span class="ruby-string">&#39;./pong.bin&#39;</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">load_ROM</span>(<span class="ruby-identifier">pong_path</span>).<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">Pointer</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_minimal_action_set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_minimal_action_set</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_minimal_action_set-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_minimal_action_set</span>
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_minimal_action_set</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">0</span>, <span class="ruby-value">1</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-value">11</span>, <span class="ruby-value">12</span>], <span class="ruby-identifier">results</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_save_screen_PNG" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_save_screen_PNG</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_save_screen_PNG-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_save_screen_PNG</span>
+  <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">save_screen_PNG</span>(<span class="ruby-string">&#39;./test.png&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_smoke" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_smoke</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def test_decode_state end</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_smoke-source">
+            <pre><span class="ruby-comment"># File test/test_ale_ruby_interface.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_smoke</span>
+  <span class="ruby-identifier">action_set</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_minimal_action_set</span>()
+  <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">act</span>(<span class="ruby-identifier">action_set</span>[<span class="ruby-value">0</span>])
+  <span class="ruby-identifier">rgb</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_screen_RGB</span>()
+  <span class="ruby-identifier">ram</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_RAM</span>()
+  <span class="ruby-identifier">grayscale</span> = <span class="ruby-ivar">@ale</span>.<span class="ruby-identifier">get_screen_grayscale</span>()
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">160</span> <span class="ruby-operator">*</span> <span class="ruby-value">210</span> <span class="ruby-operator">*</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">128</span>, <span class="ruby-identifier">ram</span>.<span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">160</span> <span class="ruby-operator">*</span> <span class="ruby-value">210</span>, <span class="ruby-identifier">grayscale</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

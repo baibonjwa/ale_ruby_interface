@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class ALEInterface - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-act">#act</a>
+    
+    <li ><a href="#method-i-clone_state">#clone_state</a>
+    
+    <li ><a href="#method-i-clone_system_state">#clone_system_state</a>
+    
+    <li ><a href="#method-i-decode_state">#decode_state</a>
+    
+    <li ><a href="#method-i-delete_state">#delete_state</a>
+    
+    <li ><a href="#method-i-encode_state">#encode_state</a>
+    
+    <li ><a href="#method-i-encode_state_len">#encode_state_len</a>
+    
+    <li ><a href="#method-i-game_over">#game_over</a>
+    
+    <li ><a href="#method-i-get_RAM">#get_RAM</a>
+    
+    <li ><a href="#method-i-get_RAM_size">#get_RAM_size</a>
+    
+    <li ><a href="#method-i-get_available_difficulties">#get_available_difficulties</a>
+    
+    <li ><a href="#method-i-get_available_modes">#get_available_modes</a>
+    
+    <li ><a href="#method-i-get_bool">#get_bool</a>
+    
+    <li ><a href="#method-i-get_episode_frame_number">#get_episode_frame_number</a>
+    
+    <li ><a href="#method-i-get_float">#get_float</a>
+    
+    <li ><a href="#method-i-get_frame_number">#get_frame_number</a>
+    
+    <li ><a href="#method-i-get_int">#get_int</a>
+    
+    <li ><a href="#method-i-get_legal_action_set">#get_legal_action_set</a>
+    
+    <li ><a href="#method-i-get_minimal_action_set">#get_minimal_action_set</a>
+    
+    <li ><a href="#method-i-get_screen">#get_screen</a>
+    
+    <li ><a href="#method-i-get_screen_RGB">#get_screen_RGB</a>
+    
+    <li ><a href="#method-i-get_screen_dims">#get_screen_dims</a>
+    
+    <li ><a href="#method-i-get_screen_grayscale">#get_screen_grayscale</a>
+    
+    <li ><a href="#method-i-get_string">#get_string</a>
+    
+    <li ><a href="#method-i-lives">#lives</a>
+    
+    <li ><a href="#method-i-load_ROM">#load_ROM</a>
+    
+    <li ><a href="#method-i-load_state">#load_state</a>
+    
+    <li ><a href="#method-i-reset_game">#reset_game</a>
+    
+    <li ><a href="#method-i-restore_state">#restore_state</a>
+    
+    <li ><a href="#method-i-restore_system_state">#restore_system_state</a>
+    
+    <li ><a href="#method-i-save_screen_PNG">#save_screen_PNG</a>
+    
+    <li ><a href="#method-i-save_state">#save_state</a>
+    
+    <li ><a href="#method-i-set_bool">#set_bool</a>
+    
+    <li ><a href="#method-i-set_difficulty">#set_difficulty</a>
+    
+    <li ><a href="#method-i-set_float">#set_float</a>
+    
+    <li ><a href="#method-i-set_int">#set_int</a>
+    
+    <li ><a href="#method-i-set_mode">#set_mode</a>
+    
+    <li ><a href="#method-i-set_string">#set_string</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-ALEInterface">
+  <h1 id="class-ALEInterface" class="class">
+    class ALEInterface
+  </h1>
+
+  <section class="description">
+    
+<p>This is the main class</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>initialize method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-comment"># if ale.cfg doesn&#39;t exist, will create one.</span>
+  <span class="ruby-identifier">src</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>), <span class="ruby-string">&quot;ale.cfg&quot;</span>)
+  <span class="ruby-identifier">dest</span> = <span class="ruby-string">&#39;./ale.cfg&#39;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&#39;./ale.cfg&#39;</span>)
+    <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">cp</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Created ale.cfg successfully&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@obj</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-constant">ALE_new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-act" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">act</span><span
+            class="method-args">(action)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>act method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="act-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">act</span>(<span class="ruby-identifier">action</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">act</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">action</span>.<span class="ruby-identifier">to_i</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clone_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clone_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-clone_state">#clone_state</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clone_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clone_state</span>
+  <span class="ruby-comment"># This makes a copy of the environment state. This copy does *not*</span>
+  <span class="ruby-comment"># include pseudorandomness, making it suitable for planning</span>
+  <span class="ruby-comment"># purposes. By contrast, see cloneSystemState.</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">cloneState</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clone_system_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clone_system_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-clone_system_state">#clone_system_state</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clone_system_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 339</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clone_system_state</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">cloneSystemState</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-decode_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">decode_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>encode_staten method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="decode_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">decode_state</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-delete_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_state</span><span
+            class="method-args">(state)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-delete_state">#delete_state</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="delete_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_state</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">deleteState</span>(<span class="ruby-identifier">state</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-encode_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">encode_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>encode_staten method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="encode_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">encode_state</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-encode_state_len" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">encode_state_len</span><span
+            class="method-args">(state)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-encode_state_len">#encode_state_len</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="encode_state_len-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">encode_state_len</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">encodeStateLen</span>(<span class="ruby-identifier">state</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-game_over" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">game_over</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-game_over">#game_over</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="game_over-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">game_over</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">game_over</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_RAM" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_RAM</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_RAM">#get_RAM</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_RAM-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_RAM</span>()
+  <span class="ruby-identifier">ram_size</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getRAMSize</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:uint64</span>, <span class="ruby-identifier">ram_size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getRAM</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">new</span>(
+      [<span class="ruby-identifier">ram_size</span>],
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_uint8</span>(<span class="ruby-identifier">ram_size</span>),
+      <span class="ruby-identifier">dtype</span><span class="ruby-operator">:</span> <span class="ruby-value">:int16</span>
+    )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_RAM_size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_RAM_size</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_RAM_size">#get_RAM_size</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_RAM_size-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_RAM_size</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getRAMSize</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_available_difficulties" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_available_difficulties</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-get_available_difficulties">#get_available_difficulties</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_available_difficulties-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_available_difficulties</span>
+  <span class="ruby-identifier">difficulties_size</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getAvailableDifficultiesSize</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">difficulties</span> = <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">zeros</span> [<span class="ruby-identifier">difficulties_size</span>]
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:int</span>, <span class="ruby-identifier">difficulties</span>.<span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">put_array_of_int</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">difficulties</span>)
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getAvailableDifficulties</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_int</span>(<span class="ruby-identifier">difficulties_size</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_available_modes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_available_modes</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-get_available_modes">#get_available_modes</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_available_modes-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_available_modes</span>
+  <span class="ruby-identifier">modes_size</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getAvailableModesSize</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">modes</span> = <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">zeros</span> [<span class="ruby-identifier">modes_size</span>]
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:int</span>, <span class="ruby-identifier">modes</span>.<span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">put_array_of_int</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">modes</span>)
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getAvailableModes</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_int</span>(<span class="ruby-identifier">modes_size</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_bool" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_bool</span><span
+            class="method-args">(key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_bool">#get_bool</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_bool-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_bool</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getBool</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_episode_frame_number" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_episode_frame_number</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-get_episode_frame_number">#get_episode_frame_number</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_episode_frame_number-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_episode_frame_number</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getEpisodeFrameNumber</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_float" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_float</span><span
+            class="method-args">(key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_float">#get_float</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_float-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_float</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getFloat</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_frame_number" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_frame_number</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_frame_number">#get_frame_number</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_frame_number-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_frame_number</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getFrameNumber</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_int" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_int</span><span
+            class="method-args">(key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_int">#get_int</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_int-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_int</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getInt</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_legal_action_set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_legal_action_set</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-get_legal_action_set">#get_legal_action_set</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_legal_action_set-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_legal_action_set</span>
+  <span class="ruby-identifier">act_size</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getLegalActionSize</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">act</span> = <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">zeros</span> [<span class="ruby-identifier">act_size</span>]
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:int</span>, <span class="ruby-identifier">act</span>.<span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">put_array_of_int</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">act</span>)
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getLegalActionSet</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_int</span>(<span class="ruby-identifier">act_size</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_minimal_action_set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_minimal_action_set</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-get_minimal_action_set">#get_minimal_action_set</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_minimal_action_set-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_minimal_action_set</span>
+  <span class="ruby-identifier">act_size</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getMinimalActionSize</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">act</span> = <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">zeros</span> [<span class="ruby-identifier">act_size</span>]
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:int</span>, <span class="ruby-identifier">act</span>.<span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">put_array_of_int</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">act</span>)
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getMinimalActionSet</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_int</span>(<span class="ruby-identifier">act_size</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_screen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_screen</span><span
+            class="method-args">(screen_data = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_screen">#get_screen</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_screen-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_screen</span>(<span class="ruby-identifier">screen_data</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># This function fills screen_data with the RAW Pixel data</span>
+  <span class="ruby-identifier">width</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenWidth</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">height</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenHeight</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-identifier">width</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">height</span>
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:uint8</span>, <span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreen</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">new</span>(
+      [<span class="ruby-identifier">width</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">height</span>],
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_uint8</span>(<span class="ruby-identifier">size</span>),
+      <span class="ruby-identifier">dtype</span><span class="ruby-operator">:</span> <span class="ruby-value">:int16</span>
+    )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_screen_RGB" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_screen_RGB</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_screen_RGB">#get_screen_RGB</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_screen_RGB-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_screen_RGB</span>()
+  <span class="ruby-comment"># This function fills screen_data with the data in RGB format</span>
+  <span class="ruby-identifier">width</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenWidth</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">height</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenHeight</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-identifier">width</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">*</span> <span class="ruby-value">3</span>
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:uint8</span>, <span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenRGB</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">new</span>(
+      [<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-value">3</span>],
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_uint8</span>(<span class="ruby-identifier">size</span>),
+      <span class="ruby-identifier">dtype</span><span class="ruby-operator">:</span> <span class="ruby-value">:int16</span>
+    )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_screen_dims" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_screen_dims</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_screen_dims">#get_screen_dims</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_screen_dims-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_screen_dims</span>
+  <span class="ruby-identifier">width</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenWidth</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">height</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenHeight</span>(<span class="ruby-ivar">@obj</span>)
+  { <span class="ruby-identifier">width</span><span class="ruby-operator">:</span> <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span><span class="ruby-operator">:</span> <span class="ruby-identifier">height</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_screen_grayscale" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_screen_grayscale</span><span
+            class="method-args">(screen_data = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-get_screen_grayscale">#get_screen_grayscale</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_screen_grayscale-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_screen_grayscale</span>(<span class="ruby-identifier">screen_data</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">width</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenWidth</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">height</span> = <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenHeight</span>(<span class="ruby-ivar">@obj</span>)
+  <span class="ruby-identifier">size</span> = <span class="ruby-identifier">width</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">*</span> <span class="ruby-value">1</span>
+  <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:uint8</span>, <span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getScreenGrayscale</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">p</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">NMatrix</span>.<span class="ruby-identifier">new</span>(
+      [<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-value">1</span>],
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">read_array_of_uint8</span>(<span class="ruby-identifier">size</span>),
+      <span class="ruby-identifier">dtype</span><span class="ruby-operator">:</span> <span class="ruby-value">:int16</span>
+    )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_string</span><span
+            class="method-args">(key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-get_string">#get_string</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_string-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_string</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">getString</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-lives" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lives</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>lives method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="lives-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lives</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">lives</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_ROM" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_ROM</span><span
+            class="method-args">(rom_file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-load_ROM">#load_ROM</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="load_ROM-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_ROM</span>(<span class="ruby-identifier">rom_file</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">loadROM</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">rom_file</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-load_state">#load_state</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="load_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_state</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">loadState</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reset_game" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reset_game</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-reset_game">#reset_game</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reset_game-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reset_game</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">game_over</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-restore_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">restore_state</span><span
+            class="method-args">(state)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-restore_state">#restore_state</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="restore_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">restore_state</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">restoreState</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">state</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-restore_system_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">restore_system_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a
+href="ALEInterface.html#method-i-restore_system_state">#restore_system_state</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="restore_system_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 345</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">restore_system_state</span>
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">restoreSystemState</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save_screen_PNG" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_screen_PNG</span><span
+            class="method-args">(filename)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-save_screen_PNG">#save_screen_PNG</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="save_screen_PNG-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 306</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_screen_PNG</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">saveScreenPNG</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">filename</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-save_state">#save_state</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="save_state-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 312</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_state</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">saveState</span>(<span class="ruby-ivar">@obj</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_bool" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_bool</span><span
+            class="method-args">(key, value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-set_bool">#set_bool</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_bool-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_bool</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">setBool</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_difficulty" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_difficulty</span><span
+            class="method-args">(difficulty)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-set_difficulty">#set_difficulty</a>
+method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_difficulty-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_difficulty</span>(<span class="ruby-identifier">difficulty</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">set_mode</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">difficulty</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_float" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_float</span><span
+            class="method-args">(key, value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-set_float">#set_float</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_float-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_float</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">setFloat</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_int" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_int</span><span
+            class="method-args">(key, value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-set_int">#set_int</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_int-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_int</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">setInt</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_mode" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_mode</span><span
+            class="method-args">(mode)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-set_mode">#set_mode</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_mode-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_mode</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">set_mode</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">mode</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_string</span><span
+            class="method-args">(key, value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="ALEInterface.html#method-i-set_string">#set_string</a> method</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_string-source">
+            <pre><span class="ruby-comment"># File lib/ale_ruby_interface.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_string</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-constant">ALELib</span>.<span class="ruby-identifier">setString</span>(<span class="ruby-ivar">@obj</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
