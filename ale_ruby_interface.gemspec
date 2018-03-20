@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ale_ruby_interface'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2018-03-14'
   s.summary     = "A ruby version of the arcade learning environment interface."
   s.description = "This directly implements a ruby version of the arcade learning environment interface."
