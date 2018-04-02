@@ -143,7 +143,7 @@ class ALEInterface
   ##
   # Resets the game, but not the full system (it is not “equivalent” to un- plugging the console from electricity).
   def reset_game
-    ALELib.game_over(@obj)
+    ALELib.reset_game(@obj)
   end
 
   ##
