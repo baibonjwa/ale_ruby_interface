@@ -10,7 +10,7 @@ ale_ruby_interface is base on [The Arcade Learning Environment](https://github.c
 
 ## Installation
 
-ale_ruby_interface have depencency with following library.
+ale_ruby_interface have dependency with following library.
 
   - [NMatrix](https://github.com/SciRuby/nmatrix)
   - [SDL1.2](https://www.libsdl.org/)
